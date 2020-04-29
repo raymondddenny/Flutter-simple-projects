@@ -1,6 +1,6 @@
 # flutter widget train
 
-A new Flutter project.
+Here are the list of flutter widget that i learned
 
 ## Getting Started
 
