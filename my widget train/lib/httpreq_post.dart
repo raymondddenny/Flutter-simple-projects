@@ -10,6 +10,7 @@ class HTTPReq extends StatefulWidget {
 class _HTTPReqState extends State<HTTPReq> {
   PostRes postResult = null;
   User user = null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,14 +30,22 @@ class _HTTPReqState extends State<HTTPReq> {
                     "\n" +
                     postResult.createdAt
                 : "Tidak ada Data POST"),
-            Text((user != null)
-                ? user.id + "\n" + user.name + "\n" + user.email
-                // user.company +
-                // "\n" +
-                // user.url +
-                // "\n" +
-                // user.text
-                : "Tidak ada Data GET"),
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Text((user != null)
+                  ? user.data.id +
+                      "\n" +
+                      user.data.email +
+                      "\n" +
+                      user.data.name +
+                      "\n" +
+                      user.ad.company +
+                      "\n" +
+                      user.ad.url +
+                      "\n" +
+                      user.ad.text
+                  : "Tidak ada Data POST"),
+            ),
             RaisedButton(
               onPressed: () {
                 // panggil method call API
@@ -50,8 +59,8 @@ class _HTTPReqState extends State<HTTPReq> {
             RaisedButton(
               onPressed: () {
                 // panggil method call API
-                User.connectToApi("5").then((value) {
-                  user = value;
+                User.connectToApi("2").then((users) {
+                  user = users;
                   setState(() {});
                 });
               },
