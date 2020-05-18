@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:media_query/provide_state_management.dart';
+import 'package:media_query/bloc_nolibrary.dart';
+import 'package:media_query/provider_state_multi.dart';
+// import 'package:media_query/provide_state_management.dart';
 // import 'package:media_query/animated_switcher.dart';
 // import 'package:media_query/shared_pref.dart';
 // import 'package:media_query/dragpage.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyApps(),
+      home: BlocWithoutPackage(),
     );
   }
 }
