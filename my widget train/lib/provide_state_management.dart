@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:media_query/provider/application_color.dart';
 import 'package:provider/provider.dart';
 
-class MyApps extends StatelessWidget {
+class MyApps extends StatefulWidget {
+  @override
+  _MyAppsState createState() => _MyAppsState();
+}
+
+class _MyAppsState extends State<MyApps> {
   bool isOn = false;
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<ApplicationColor>(
