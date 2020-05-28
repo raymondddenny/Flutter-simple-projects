@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:media_query/bloc/bloc_color.dart';
 
-/**
- * class bloc yang menggunakan pub flutter_bloc
- */
+/// class bloc yang menggunakan pub flutter_bloc
+
 class BlocWithLibrary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
