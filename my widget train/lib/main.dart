@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:media_query/customProgressBar.dart';
+import 'package:media_query/product_card.dart';
 // import 'package:media_query/bloc/bloc_color.dart';
 // import 'package:media_query/bloc_withlibrary.dart';
 // import 'package:media_query/timers.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CustomProgBar(),
+      debugShowCheckedModeBanner: false,
+      home: ProductCards(),
     );
   }
 }

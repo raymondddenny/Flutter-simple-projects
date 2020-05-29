@@ -9,14 +9,11 @@ class ColorBlocs extends Bloc<ColorEvents, Color> {
   Color _color = Colors.red;
 
   @override
-  // TODO: implement initialState
   Color get initialState => _color;
 
   @override
   // return stream
   Stream<Color> mapEventToState(ColorEvents event) async* {
-    // TODO: implement mapEventToState
-
     // ubah color berdasarkan event
     _color = (event == ColorEvents.to_red) ? Colors.red : Colors.green;
     // yield mengembalikan aliran data/stream
